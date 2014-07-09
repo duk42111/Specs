@@ -2,21 +2,25 @@
   "name": "Kamcord",
   "version": "1.7.6",
   "summary": "The public Kamcord framework to add video recording to your games.",
-  "homepage": "https://github.com/kamcord/kamcord-ios-sdk",
+  "homepage": "http://kamcord.com",
   "license": {
-    "type": "MIT",
-    "file": "LICENSE"
+    "type": "Copyright",
+    "file": "https://github.com/kamcord/kamcord-ios-sdk/blob/master/Kamcord%20-%20Terms%20of%20Use.pdf"
   },
-  "authors": {
-    "Kamcord": "support@kamcord.com"
-  },
+  "author": "Kamcord",
   "source": {
     "git": "https://github.com/Kamcord/kamcord-ios-sdk.git",
     "tag": "1.7.6"
   },
-  "platforms": {
+  "platform": {
     "ios": "5.0",
   },
-  "source_files": "Kamcord/**/*.{h,m}",
+  "source_files": "Kamcord.embeddedframework/Versions/A/Headers/*.h",
+  "ios": {
+    "vendored_frameworks": "Kamcord.embeddedframework"
+  },
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "$(inherited)"
+  },
   "requires_arc": true
 }
